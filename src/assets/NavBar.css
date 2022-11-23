@@ -1,0 +1,29 @@
+.header {
+    background-color: #000;
+    margin: 0;
+  }
+  .header .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .header .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(255, 255, 255);
+  }
+  .header .logo {
+    width: 64px;
+    height: 64px;
+    padding: 5px;
+  }
+  body {
+    margin: 0;
+    background-color: #333333;
+    color: white;
+    font-family: "Shadows Into Light", cursive;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .cart {
+    height: 32px;
+    width: 32px;
+  }
