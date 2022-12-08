@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../assets/logo.svg';
 import cart from '../../assets/cart.svg';
 import MenuItem from '../MenuItem';
+import {NavLink} from "react-router-dom";
 
 const NavBar = () => (
   <header className="header title h1">
@@ -10,23 +11,23 @@ const NavBar = () => (
         <ul className="navbar-nav col-12 col-md-5 justify-content-around">
           <MenuItem itemName="Inicio" />
 
-          <MenuItem itemName="¿Quiénes somos?" />
+          <MenuItem itemName="Tazas" to="/category/tazas" />
 
-          <MenuItem itemName="Galeria" />
+          <MenuItem itemName="Agendas" to="/category/agendas" />
         </ul>
 
-        <a className="d-none d-md-block col-md-2 active" href="#">
+        <NavLink className="d-none d-md-block col-md-2 active" to="/">
           <img
             className="logo d-block mx-auto"
             src={logo}
             alt="Logo un caos organizado"
           />
-        </a>
+        </NavLink>
 
         <ul className="navbar-nav col-12 col-md-5 justify-content-around">
-        <MenuItem itemName='Productos' />
+        <MenuItem itemName='Stickers' to="/category/stickers" />
 
-        <MenuItem itemName='Contactos' />
+        <MenuItem itemName='Tattoos' to="/category/tattoos" />
 
           <button type="button" className="btn btn-dark position-relative">
             <img

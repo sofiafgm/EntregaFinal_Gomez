@@ -1,10 +1,11 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 
-const MenuItem = ({itemName, itemHref = ''}) => (
+const MenuItem = ({itemName, to = '/'}) => (
   <li className="nav-item position-relative">
-    <a className="nav-link" href={itemHref}>
+    <NavLink className="nav-link" to={to}>
       {itemName}
-    </a>
+    </NavLink>
   </li>
 );
 
