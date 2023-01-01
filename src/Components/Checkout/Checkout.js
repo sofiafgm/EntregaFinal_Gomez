@@ -11,14 +11,22 @@ const Checkout = ({
   onEmptyCarty,
   isOrderComplete,
   isOrderFailed,
+  title,
+  msg,
+  homeText
 }) => {
-  if (isOrderComplete) {
+  if (isOrderComplete || isOrderFailed || !cart.length) {
     return (
       <div className="container">
-        <h1>Tu orden secompletó conéxito</h1>
-        <Link className="btn btn-secondary btn-lg" to="/">
-          Ir a comprar
-        </Link>
+        <div className="col-md-6 offset-md-3 text-center">
+          <h1>{title}</h1>
+          <p className="h4">
+            {msg}<strong>{isOrderComplete}</strong>
+          </p>
+          <Link className="btn btn-secondary btn-lg  my-5" to="/">
+            {homeText}
+          </Link>
+        </div>
       </div>
     );
   }
@@ -26,7 +34,7 @@ const Checkout = ({
   if (isOrderFailed) {
     return (
       <div className="container">
-        <h1>Hubo un error alprocesartu orden</h1>
+        <h1></h1>
 
         <Link className="btn btn-secondary btn-lg" to="/">
           Volver a la tienda
@@ -117,15 +125,6 @@ const Checkout = ({
       </div>
     );
   }
-
-  return (
-    <div className="container">
-      <h1>Aun no tienes nada en el carrito</h1>
-      <Link className="btn btn-secondary btn-lg" to="/">
-        Ir a comprar
-      </Link>
-    </div>
-  );
 };
 
 export default Checkout;

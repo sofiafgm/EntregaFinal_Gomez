@@ -5,6 +5,7 @@ import CheckoutForm from './CheckoutForm';
 const defaultFormValidationState = {
   formValidated: false,
   nameValid: false,
+  lastNameValid: false,
   phoneValid: false,
   emailValid: false,
   emailTwoValid: false,
@@ -12,6 +13,7 @@ const defaultFormValidationState = {
 
 const CheckoutFormContainer = ({ onCeckout }) => {
   const [name, setName] = useState('');
+  const [lastName, setLastname] = useState('');
   const [phone, setPhone] = useState('');
   const [emailOne, setEmailOne] = useState('');
   const [emailTwo, setEmailTwo] = useState('');
@@ -29,6 +31,7 @@ const CheckoutFormContainer = ({ onCeckout }) => {
     const isFormValid = {
       formValidated: true,
       nameValid: Boolean(name),
+      lastNameValid: Boolean(name),
       phoneValid: Boolean(phone),
       emailValid: Boolean(emailOne),
       emailTwoValid: emailOne && emailOne == emailTwo,
@@ -52,6 +55,8 @@ const CheckoutFormContainer = ({ onCeckout }) => {
     <CheckoutForm
       name={name}
       onNameChange={setItemValue(setName)}
+      lastName={lastName}
+      onLastNameChange={setItemValue(setLastname)}
       phone={phone}
       onPhoneChange={setItemValue(setPhone)}
       emailOne={emailOne}

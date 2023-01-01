@@ -15,13 +15,18 @@ function App() {
           <header className="App-header">
             <NavBar />
           </header>
-          <Routes>
-            <Route path="/" element={<ItemListContainer greeting="Tienda" />} />
-            <Route path="/category/:id" element={<ItemListContainer />} />
-            <Route path="/product/:id" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<CheckoutContainer />} />
-            <Route path="/stock" element={<ProductStock />} />
-          </Routes>
+          <div className="my-5">
+            <Routes>
+              <Route
+                path="/"
+                element={<ItemListContainer greeting="Tienda" />}
+              />
+              <Route path="/category/:id" element={<ItemListContainer />} />
+              <Route path="/product/:id" element={<ItemDetailContainer />} />
+              <Route path="/cart" element={<CheckoutContainer />} />
+              <Route path="/stock" element={<ProductStock />} />
+            </Routes>
+          </div>
         </CartContextProvider>
       </BrowserRouter>
     </div>

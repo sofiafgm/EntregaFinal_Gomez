@@ -10,6 +10,8 @@ const FormValidation = ({ valid, invalid }) => (
 const CheckoutForm = ({
   name,
   onNameChange,
+  lastName,
+  onLastNameChange,
   phone,
   onPhoneChange,
   emailOne,
@@ -46,6 +48,24 @@ const CheckoutForm = ({
       </div>
 
       <div className="col-md-6">
+        <label for="lastName" className="form-label">
+          Apellido
+        </label>
+
+        <input
+          value={lastName}
+          onChange={onLastNameChange}
+          type="text"
+          className={`form-control ${
+            formValidated ? (lastName ? 'is-valid' : 'is-invalid') : ''
+          }`}
+          id="lastName"
+        />
+
+        <FormValidation valid={'chido!'} invalid={'hay que llenar esto...'} />
+      </div>
+
+      <div className="col-md-7">
         <label for="phone" className="form-label">
           Teléfono
         </label>
@@ -101,7 +121,7 @@ const CheckoutForm = ({
 
       <div className="col-12">
         <button className="btn btn-secondary btn-lg w-100" type="submit">
-          Completar Compra
+          Realizar compra
         </button>
       </div>
     </form>
