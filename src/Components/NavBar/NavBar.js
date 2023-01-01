@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
-import cart from '../../assets/cart.svg';
 import MenuItem from '../MenuItem';
-import {NavLink} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import './NavBar.css';
+import CartWidgetContainer from '../CartWidget/CartWidgetContainer';
 
 const NavBar = () => (
   <header className="header title h1">
@@ -25,21 +26,13 @@ const NavBar = () => (
         </NavLink>
 
         <ul className="navbar-nav col-12 col-md-5 justify-content-around">
-        <MenuItem itemName='Stickers' to="/category/stickers" />
+          <MenuItem itemName="Stickers" to="/category/stickers" />
 
-        <MenuItem itemName='Tattoos' to="/category/tattoos" />
+          <MenuItem itemName="Peluches" to="/category/peluches" />
 
-          <button type="button" className="btn btn-dark position-relative">
-            <img
-              className="cart d-block mx-auto"
-              src={cart}
-              alt="Carrito de compras"
-            />
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-black">
-              99+
-              <span className="visually-hidden">unread messages</span>
-            </span>
-          </button>
+          <li className="nav-item position-relative">
+            <CartWidgetContainer />
+          </li>
         </ul>
       </div>
     </nav>

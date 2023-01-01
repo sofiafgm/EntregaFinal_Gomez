@@ -1,32 +1,52 @@
-import React, {useEffect, useState} from 'react';
-import ListCardItem from "../ListCardItem/ListCardItem";
-import {useParams} from "react-router-dom";
-import {gFetch} from "../../helpers/gFetch";
+import React, { useEffect, useState } from 'react';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
+import { useCallback } from 'react';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState(null)
-  const [message, setMessage] = useState('cargando')
-  const {id = ''} = useParams()
+  const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(0);
+  const [message, setMessage] = useState('Cargando...');
+  const { id = '' } = useParams();
 
   useEffect(() => {
-    gFetch(`fakeApi.com/product/${id}`)
-      .then(data => JSON.parse(data))
-      .then(data => setProduct(data))
+    const db = getFirestore();
+    let querydoc = doc(db, 'products', id);
+
+    getDoc(querydoc)
+      .then(resp => ({id: resp.id, ...resp.data()}))
+      .then((data) => setProduct(data))
       .catch(() => setMessage('error de servidor, favor de recargar página'))
-      .finally(() => setMessage('no se encontró el producto'))
-  }, [id])
+      .finally(() => setMessage('no se encontró el producto'));
+  }, [id]);
 
+  const { addCart } = useContext(CartContext);
 
-  return <div className="container">
-    {product ?
-      (
-        <div className="row">
-          <h1>{product.name}</h1>
-          <ListCardItem body={product.description} cost={product.cost}/>
-        </div>
-      ) :
-      (<h1>{message}</h1>)}
-  </div>
-}
+  const onPlus = useCallback(() => setQuantity(quantity + 1), [quantity]);
+
+  const onMinus = useCallback(
+    () => setQuantity(quantity > 0 ? quantity - 1 : 0),
+    [quantity]
+  );
+
+  const onAdd = () => {
+    addCart(product, quantity);
+    setQuantity(0);
+  };
+
+  return (
+    <ItemDetail
+      product={product}
+      message={message}
+      quantity={quantity}
+      onPlus={onPlus}
+      onMinus={onMinus}
+      onAdd={onAdd}
+    />
+  );
+};
 
 export default ItemDetailContainer;

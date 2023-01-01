@@ -1,0 +1,11 @@
+.cart-widget svg {
+    color: white;
+    height: 24px;
+    width: 24px;
+}
+
+.btn .badge.cart-badge {
+    font-family: Arial, Helvetica, sans-serif;
+    top: unset;
+    transform: translate(-50%,50%);
+}

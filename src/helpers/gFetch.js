@@ -1,3 +1,21 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBzmZHPscYxGixZoYgMUsmPnQNed3dx_1A",
+  authDomain: "un-caos-organizado.firebaseapp.com",
+  projectId: "un-caos-organizado",
+  storageBucket: "un-caos-organizado.appspot.com",
+  messagingSenderId: "585084745675",
+  appId: "1:585084745675:web:58ad3f534465adb2bc284e"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 const mockDataBase = [
     {category: 'tazas', id: '1', name: 'Taza Halloween', cost: '$10.00', description: 'Taza con ilustración de Halloween'},
     {category: 'tazas', id: '2', name: 'Taza Hongos', cost: '$10.00', description: 'Taza con ilustración de Hongos'},

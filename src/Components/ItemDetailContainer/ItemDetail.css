@@ -1,0 +1,31 @@
+.main-wrapper {
+    margin-top: 40px;
+}
+
+.cost {
+    font-size: 40px;
+}
+
+.product-detail-card {
+    padding: 20px;
+}
+
+.product-title {
+    text-transform: uppercase;
+}
+
+.info-detail {
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+}
+
+.info-detail .btn-sm {
+    height: 20px;
+    line-height: 10px;
+    margin: 1px 5px;
+}
+
+.product-image {
+    width: 100%;
+}

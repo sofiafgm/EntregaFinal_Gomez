@@ -1,0 +1,21 @@
+.table-content {
+
+}
+.img-cart {
+    height: 90px;
+    aspect-ratio: 1/1;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    
+}
+
+.sumary {
+    margin: 30px;
+}
+
