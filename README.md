@@ -10,6 +10,12 @@ Utiliza la librería de css de Bootstrap ya que esta facilita tener una presenta
 
 Se incluyó el SDK de firebase ya que elcurso lo requiere para manejo de base de datos.
 
+## Adicional
+
+El sitio cuenta c un cart persistente en localStorage. El contexto del cart se encarga de inicialiarlo y actualizarlo en cada cambio de carrito. Esto sólo sucede en el navegaor del usuario y no existe colección en la base de datos.
+
+Se incluyó un catalogo de productos para ver más facilmente una lista de la base de datos en la ruta '/stock'. No existe link a esta ruta y tiene que ser introducida manualmente.
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
