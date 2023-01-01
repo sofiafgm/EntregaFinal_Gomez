@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Un Caos organizado e-commerce
+
+Este es un proyecto Realizado por Sofía Gomez Mata para el curso de React de Coderhouse.
+
+## Sobre el proyceto
+
+Este proyecto está hecho en base a los productos de un potencial cliente, considerando su imagen de marca, estilos y necesidades. Está enfocado enrealizar la funcionalidad de compra ya que es parte importante para el sitio final.
+
+Utiliza la librería de css de Bootstrap ya que esta facilita tener una presentación inicial para la app, esta fue incluida directamente en los archivos de proyecto para tener la facilidad de explorar y editar los archivos en caso de ser necesario.
+
+Se incluyó el SDK de firebase ya que elcurso lo requiere para manejo de base de datos.
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
