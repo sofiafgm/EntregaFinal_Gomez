@@ -16,6 +16,21 @@ El sitio cuenta c un cart persistente en localStorage. El contexto del cart se e
 
 Se incluyó un catalogo de productos para ver más facilmente una lista de la base de datos en la ruta '/stock'. No existe link a esta ruta y tiene que ser introducida manualmente.
 
+## Dependencias:
+ No existen dependencias fuera de las trabajadas en la clase.
+ La dependencias instaladas en la clase fueron:
+  - @testing-library/jest-dom: v5.16.5
+  - @testing-library/react: v13.4.0
+  - @testing-library/user-event: v13.5.0
+  - react: v18.2.0
+  - react-dom: v18.2.0
+  - react-router-dom: v6.4.4
+  - react-scripts: v5.0.1
+  - web-vitals: v2.1.4
+
+    todas éstas instaladas por Create React App, excepto:
+    firebase: v9.15.0,
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
