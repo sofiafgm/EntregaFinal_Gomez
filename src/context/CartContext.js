@@ -41,7 +41,7 @@ export const CartContext = createContext({
 // load local storage
 const getInitialCart = () => {
   try {
-    const storageCart = localStorage.getItem('cart');
+    const storageCart = localStorage.getItem('cart') || '[]';
     const parsedCart = JSON.parse(storageCart);
 
     return parsedCart;
