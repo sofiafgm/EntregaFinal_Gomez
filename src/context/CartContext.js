@@ -47,6 +47,7 @@ const getInitialCart = () => {
     return parsedCart;
   } catch (e) {
     console.error(e);
+    return []
   }
 };
 
