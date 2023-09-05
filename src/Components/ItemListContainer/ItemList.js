@@ -1,18 +1,9 @@
 import React from 'react';
 import ListCardItem from '../ListCardItem/ListCardItem';
 
-const ItemList = ({ greeting, category, isLoading = true, products }) => {
+const ItemList = ({ isLoading = true, products }) => {
   return (
     <div>
-      <p
-        style={{
-          backgroundColor: 'gray',
-          fontSize: '80px',
-          textAlign: 'center',
-        }}
-      >
-        {category || greeting}
-      </p>
       {isLoading ? (
         <p> CARGANDO... </p>
       ) : (

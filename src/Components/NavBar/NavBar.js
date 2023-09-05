@@ -3,7 +3,6 @@ import logo from '../../assets/logo.svg';
 import MenuItem from '../MenuItem';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-import CartWidgetContainer from '../CartWidget/CartWidgetContainer';
 
 const NavBar = () => (
   <header className="header title h1">
@@ -12,9 +11,7 @@ const NavBar = () => (
         <ul className="navbar-nav col-12 col-md-5 justify-content-around">
           <MenuItem itemName="Inicio" />
 
-          <MenuItem itemName="Tazas" to="/category/tazas" />
-
-          <MenuItem itemName="Agendas" to="/category/agendas" />
+          <MenuItem itemName="Productos" to="/products" />
         </ul>
 
         <NavLink className="d-none d-md-block col-md-2 active" to="/">
@@ -26,13 +23,10 @@ const NavBar = () => (
         </NavLink>
 
         <ul className="navbar-nav col-12 col-md-5 justify-content-around">
-          <MenuItem itemName="Stickers" to="/category/stickers" />
+          <MenuItem itemName="Tattoo" to="/tattoo" />
 
-          <MenuItem itemName="Peluches" to="/category/peluches" />
+          <MenuItem itemName="Contacto" to="/contact" />
 
-          <li className="nav-item position-relative">
-            <CartWidgetContainer />
-          </li>
         </ul>
       </div>
     </nav>

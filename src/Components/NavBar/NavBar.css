@@ -13,22 +13,8 @@
     height: 64px;
     padding: 5px;
   }
-  body {
-    margin: 0;
-    background-color: #333333;
-    color: white;
-    font-family: "Shadows Into Light", cursive;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
 
   .title {
     font-family: "Amatic SC", cursive;
     font-weight: bolder;
-  }
-
-  .cart {
-    height: 32px;
-    width: 32px;
   }

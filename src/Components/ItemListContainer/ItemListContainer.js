@@ -9,7 +9,7 @@ import {
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 
-const ItemListContainer = ({ greeting = 'Saludo default' }) => {
+const ItemListContainer = () => {
   const { id: category = '' } = useParams();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -38,7 +38,6 @@ const ItemListContainer = ({ greeting = 'Saludo default' }) => {
     <ItemList
       products={products}
       isLoading={isLoading}
-      greeting={greeting}
       category={category}
     />
   );
